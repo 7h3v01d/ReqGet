@@ -25,28 +25,30 @@ Includes optional Tkinter GUI for easier use.
 
 ```bash
 python cli.py /path/to/project
+```
 To specify an output filename:
 
-bash
-Copy
-Edit
+```bash
 python cli.py /path/to/project -o myreqs.txt
-🪟 GUI Mode
-If Tkinter is available and no arguments are passed:
+```
 
-bash
-Copy
-Edit
+## 🪟 GUI Mode
+
+If Tkinter is available and no arguments are passed:
+```bash
 python cli.py
+```
+
 📦 Installation (when released)
-bash
-Copy
-Edit
+```bash
 pip install reqget
-🔐 License
+```
+
+## 🔐 License
+
 MIT License – see LICENSE.md
 
-Built with ❤️ by Leon Priest.
+
 
 yaml
 Copy
@@ -57,4 +59,5 @@ Edit
 ### ✅ 5. `requirements.txt` (minimal for your project)
 
 ```txt
+
 pkg_resources
