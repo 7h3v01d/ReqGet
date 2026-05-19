@@ -3,6 +3,9 @@
 **Version**: 1.0.0  
 **Author**: Leon Priest
 
+<img width="682" height="652" alt="screenshot" src="https://github.com/user-attachments/assets/1bc2c647-109e-4383-9521-32c71cfe78cf" />
+
+
 ## 🧠 What is Reqget?
 
 Reqget is a smart dependency scanner that traverses a Python codebase to:
