@@ -1,69 +1,27 @@
-# 📦 ReqGet (Archived)
+# Reqget: Smart Requirements.txt Generator
 
-A small Python utility that **extracts third-party dependencies from source code** by analyzing import statements.
+**Version**: 1.0.0  
+**Author**: Leon Priest
 
-ReqGet is archived and represents an early exploration into static analysis and dependency discovery.
+## 🧠 What is Reqget?
 
----
+Reqget is a smart dependency scanner that traverses a Python codebase to:
+- Extract imports using AST
+- Map them to pip-installable packages
+- Resolve transitive dependencies
+- Check for known package conflicts
+- Output a `requirements.txt` automatically
 
-## 🚀 What problem does this solve?
+Includes optional Tkinter GUI for easier use.
 
-Python projects often drift out of sync with their `requirements.txt`.
+## 🧪 Features
+- Accurate import analysis
+- Conflict checking via curated `Knownconflicts.json`
+- Transitive dependency inclusion
+- GUI and CLI interface
+- Blacklist-aware (stdlib-safe)
 
-ReqGet answers a simple question:
-
-> “What packages does this script actually import?”
-
-By inspecting source files directly, ReqGet avoids guesswork and environment-specific noise.
-
----
-
-## ✨ What it does
-
-- Scans Python files for `import` and `from ... import ...` statements
-- Filters out Python standard library modules
-- Outputs a list of third-party dependencies
-- Works without executing the code
-
-This makes it useful for:
-- quick audits
-- rebuilding lost `requirements.txt` files
-- understanding unfamiliar scripts
-
----
-
-## ▶️ Usage
+## 🖥️ Usage (CLI)
 
 ```bash
-python reqget.py path/to/script.py
-```
-Output is a simple list of detected dependencies.
-
-## 🧠 Design notes
-Uses static analysis instead of runtime inspection
-
--Avoids environment coupling
-
-- Focuses on clarity over completeness
-
-ReqGet does not:
-
-- resolve versions
-- install packages
-- manage environments
-
-Those concerns are intentionally left out.
-
-## ⚠️ Limitations
-Dynamic imports may not be detected
-
-Does not infer transitive dependencies
-
-Standard library list reflects the Python version at the time
-
-This tool is best used as a starting point, not a full dependency manager.
-## 📜 License
-Unlicensed (personal archive).
-
-### 🏷️ Status
-Archived — small, focused, and correct.
+python cli.py /path/to/project
